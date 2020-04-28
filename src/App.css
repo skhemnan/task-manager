@@ -1,38 +1,181 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab:300,400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+.app-wrapper {
+  background-color: #292f38;
+	width:100vw;
+  height: 100vh;
+}
+
+.header h1 {
+  color: #ccc;
+  font-weight: 300;
   text-align: center;
+  margin: 50px 10px 30px 10px;
+  font-family: 'Josefin Sans', serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main {
   display: flex;
   flex-direction: column;
+  align-items: space-between;
+  width: 100%;
+}
+
+.form {
+  display: flex;
+	flex-direction:column;
+	justify-content:center;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position:fixed;
+	bottom:0;
+	width:100%;
+	padding-bottom:20px;
+	padding-left:5px;
 }
 
-.App-link {
-  color: #61dafb;
+.list {
+  width: 90%;
+	padding-top:10px;
+	margin:auto;
+	justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #aaa;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 10px;
+}
+
+.task-input {
+  width: 80%;
+  padding: 15px 10px 10px 20px;
+  margin-right: 10px;
+	margin-bottom: 10px;
+  font-family: 'Josefin Sans', serif;
+  font-size: 20px;
+  color: #ccc;
+  background-color: #1d222b;
+  border: 1px solid #444;
+  outline: none;
+  border-radius: 20px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.buttons {
+  display: flex;
+	margin-top:5px;
+}
+
+.btn {
+  margin: 10px;
+}
+
+.add-task-btn {
+	width:100px;
+	padding:10px;
+  background-color: #790e43;
+  color: #ccc;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  outline: none;
+  cursor: pointer;
+	margin:auto;
+	margin-right:10px;
+}
+
+.list-item {
+  display: flex;
+	justify-content:space-between;
+  margin: 20px 0;
+  padding: 10px;
+	padding-bottom:5px;
+}
+
+.list-item span {
+  color: #999;
+	font-family: 'Josefin Sans';
+	font-size:20px;
+	position:fixed;
+	left:17%;
+}
+
+.list-item.buttons {
+	margin-left:70%;
+}
+
+.task-btn {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.btn-delete {
+  font-size: 16px;
+  color: red;
+	padding-right: 10px;
+}
+
+.btn-edit {
+  font-size: 16px;
+  color: grey;
+}
+
+.clear-btn {
+	width:100px;
+	padding:10px;
+  background-color: #790e43;
+  color: #ccc;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  outline: none;
+  cursor: pointer;
+	margin:0;
+}
+
+.no-tasks {
+  color: #777;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 100px;
+	font-family: 'Josefin Sans'
+}
+
+.unchecked-button{
+	background:none;
+	border: 2px solid grey;
+	border-radius:50%;
+	width:20px;
+}
+
+.checked-button{
+	background:#790e43;
+	border: 2px solid grey;
+	border-radius:50%;
+	width:20px;
 }
