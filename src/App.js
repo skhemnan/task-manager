@@ -8,7 +8,7 @@ import './App.css';
 const App = () => {
   return (
 	<TaskListContextProvider>
-    <div className="main">
+    		<div className="main">
 			<div className="app-wrapper">
 				<Header />
 				<TaskList />
